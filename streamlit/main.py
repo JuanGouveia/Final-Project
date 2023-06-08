@@ -12,7 +12,6 @@ st.set_page_config(page_title='F1 Race Record', page_icon='🏎️', layout='wid
 
 st.sidebar.image(Image.open('images/formula_one.png'))
 
-
 def show_home():
     st.title('Formula One Race Record')
     st.subheader('¡Welcome to Formula One Race Record!')
@@ -29,6 +28,8 @@ calendar = calendar.sort_values('year', ascending=False)
 
 def show_calendar():
     st.title('Calendar')
+    st.write('---')
+    st.write('')
 
     years = calendar['year'].unique()
 
@@ -36,7 +37,6 @@ def show_calendar():
 
     filtered_calendar = calendar[calendar['year'] == selected_year].sort_values('Round', ascending=True)
 
-    # CSS to inject contained in a string
     hide_table_row_index = """
                 <style>
                 thead tr th:first-child {display:none}
@@ -44,7 +44,6 @@ def show_calendar():
                 </style>
                 """
 
-    # Inject CSS with Markdown
     st.markdown(hide_table_row_index, unsafe_allow_html=True)
 
     st.table(filtered_calendar[['Round', 'Race', 'Date', 'Circuit', 'Location']])
@@ -52,6 +51,8 @@ def show_calendar():
 
 def show_races():
     st.title('Races')
+    st.write('---')
+    st.write('')
 
 
 
