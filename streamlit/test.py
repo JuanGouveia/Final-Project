@@ -6,9 +6,7 @@ import webbrowser
 import base64
 import io
 
-
-st.set_page_config(page_title='F1 Race Record', page_icon='🏎️', layout='wide', initial_sidebar_state='expanded')
-
+st.set_page_config(page_title="Mad Traffic AI", page_icon=":car:", layout="wide", initial_sidebar_state="expanded")
 
 st.sidebar.image(Image.open('images/formula_one.png'))
 
@@ -16,7 +14,9 @@ st.sidebar.image(Image.open('images/formula_one.png'))
 def show_home():
     st.title('Formula One Race Record')
     st.subheader('¡Welcome to Formula One Race Record!')
-    st.write('---')
+    st.write('')
+    st.write('')
+    st.write('')
     st.write('')
     st.write('- Explore the race history and calendar of Formula 1')
     st.write('- Our project offers detailed visualizations of past races, as well as information about the dates and locations of upcoming races.')
@@ -36,24 +36,11 @@ def show_calendar():
 
     filtered_calendar = calendar[calendar['year'] == selected_year].sort_values('Round', ascending=True)
 
-    # CSS to inject contained in a string
-    hide_table_row_index = """
-                <style>
-                thead tr th:first-child {display:none}
-                tbody th {display:none}
-                </style>
-                """
-
-    # Inject CSS with Markdown
-    st.markdown(hide_table_row_index, unsafe_allow_html=True)
-
     st.table(filtered_calendar[['Round', 'Race', 'Date', 'Circuit', 'Location']])
 
 
 def show_races():
     st.title('Races')
-
-
 
 
 sel_page = st.sidebar.radio('Information', ('Home', 'Calendar', 'Races'))
