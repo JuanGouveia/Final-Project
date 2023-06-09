@@ -142,6 +142,8 @@ def show_races():
 
 
         st.write('')
+        st.write('')
+        st.write('')
         st.write('---')
         st.title('Race evolution')
         st.write('---')
