@@ -67,7 +67,7 @@ En la fase de transformación, realizamos varias acciones en los datos recopilad
 <summary><b>https://www.kaggle.com/</b></summary>
 <br>
 
-![F1 Dataset](visualization/images/kaggle.png)
+![F1 Dataset](visualization/images/races_raw.png)
 
 </details>
 
@@ -77,7 +77,7 @@ En la fase de transformación, realizamos varias acciones en los datos recopilad
 <summary><b>https://f1.fandom.com/</b></summary>
 <br>
 
-![F1 Dataset](visualization/images//wiki_f1.png)
+![F1 Safety Car](visualization/images/safety_raw.png)
 
 </details>
 
@@ -87,7 +87,7 @@ En la fase de transformación, realizamos varias acciones en los datos recopilad
 <summary><b>https://pypi.org/</b></summary>
 <br>
 
-![F1 Dataset](visualization/images//fast_f1.png)
+![Fastf1](visualization/images/fastf1_raw.png)
 
 </details>
 
