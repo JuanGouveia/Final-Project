@@ -1,0 +1,405 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+-- -----------------------------------------------------
+-- Schema f1record
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema f1record
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `f1record` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci ;
+USE `f1record` ;
+
+-- -----------------------------------------------------
+-- Table `f1record`.`circuits`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `f1record`.`circuits` (
+  `circuitId` INT NOT NULL,
+  `circuitRef` VARCHAR(50) NULL DEFAULT NULL,
+  `name` VARCHAR(50) NULL DEFAULT NULL,
+  `location` VARCHAR(50) NULL DEFAULT NULL,
+  `country` VARCHAR(50) NULL DEFAULT NULL,
+  `lat` FLOAT NULL DEFAULT NULL,
+  `lng` FLOAT NULL DEFAULT NULL,
+  `alt` INT NULL DEFAULT NULL,
+  PRIMARY KEY (`circuitId`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `f1record`.`races`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `f1record`.`races` (
+  `raceId` INT NOT NULL,
+  `year` INT NULL DEFAULT NULL,
+  `round` INT NULL DEFAULT NULL,
+  `name` VARCHAR(50) NULL DEFAULT NULL,
+  `date` VARCHAR(12) NULL DEFAULT NULL,
+  `circuitId` INT NOT NULL,
+  PRIMARY KEY (`raceId`),
+  INDEX `circuitId_idx` (`circuitId` ASC) VISIBLE,
+  CONSTRAINT `circuitId`
+    FOREIGN KEY (`circuitId`)
+    REFERENCES `f1record`.`circuits` (`circuitId`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `f1record`.`constructors`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `f1record`.`constructors` (
+  `constructorId` INT NOT NULL,
+  `constructorRef` VARCHAR(50) NULL DEFAULT NULL,
+  `name` VARCHAR(50) NULL DEFAULT NULL,
+  `nationality` VARCHAR(50) NULL DEFAULT NULL,
+  PRIMARY KEY (`constructorId`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `f1record`.`constructor_results`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `f1record`.`constructor_results` (
+  `constructorResultsId` INT NOT NULL,
+  `points` FLOAT NULL DEFAULT NULL,
+  `raceId` INT NOT NULL,
+  `constructorId` INT NOT NULL,
+  PRIMARY KEY (`constructorResultsId`),
+  INDEX `raceId_idx` (`raceId` ASC) VISIBLE,
+  INDEX `constructorId_idx` (`constructorId` ASC) VISIBLE,
+  CONSTRAINT `raceId`
+    FOREIGN KEY (`raceId`)
+    REFERENCES `f1record`.`races` (`raceId`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `constructorId`
+    FOREIGN KEY (`constructorId`)
+    REFERENCES `f1record`.`constructors` (`constructorId`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `f1record`.`constructor_standings`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `f1record`.`constructor_standings` (
+  `constructorStandingsId` INT NOT NULL,
+  `points` FLOAT NULL DEFAULT NULL,
+  `position` INT NULL DEFAULT NULL,
+  `wins` INT NULL DEFAULT NULL,
+  `raceId` INT NOT NULL,
+  `constructorId` INT NOT NULL,
+  PRIMARY KEY (`constructorStandingsId`),
+  INDEX `raceId_idx` (`raceId` ASC) VISIBLE,
+  INDEX `constructorId_idx` (`constructorId` ASC) VISIBLE,
+  CONSTRAINT `raceId`
+    FOREIGN KEY (`raceId`)
+    REFERENCES `f1record`.`races` (`raceId`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `constructorId`
+    FOREIGN KEY (`constructorId`)
+    REFERENCES `f1record`.`constructors` (`constructorId`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `f1record`.`drivers`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `f1record`.`drivers` (
+  `driverId` INT NOT NULL,
+  `driverRef` VARCHAR(50) NULL DEFAULT NULL,
+  `forename` VARCHAR(50) NULL DEFAULT NULL,
+  `surname` VARCHAR(50) NULL DEFAULT NULL,
+  `dob` VARCHAR(12) NULL DEFAULT NULL,
+  `nationality` VARCHAR(50) NULL DEFAULT NULL,
+  PRIMARY KEY (`driverId`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `f1record`.`driver_standings`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `f1record`.`driver_standings` (
+  `driverStandingsId` INT NOT NULL,
+  `points` FLOAT NULL DEFAULT NULL,
+  `position` INT NULL DEFAULT NULL,
+  `wins` INT NULL DEFAULT NULL,
+  `raceId` INT NOT NULL,
+  `driverId` INT NOT NULL,
+  PRIMARY KEY (`driverStandingsId`),
+  INDEX `raceId_idx` (`raceId` ASC) VISIBLE,
+  INDEX `driverId_idx` (`driverId` ASC) VISIBLE,
+  CONSTRAINT `raceId`
+    FOREIGN KEY (`raceId`)
+    REFERENCES `f1record`.`races` (`raceId`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `driverId`
+    FOREIGN KEY (`driverId`)
+    REFERENCES `f1record`.`drivers` (`driverId`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `f1record`.`lap_times`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `f1record`.`lap_times` (
+  `lapId` INT NOT NULL,
+  `lap` INT NULL DEFAULT NULL,
+  `position` INT NULL DEFAULT NULL,
+  `time` VARCHAR(12) NULL DEFAULT NULL,
+  `milliseconds` INT NULL DEFAULT NULL,
+  `raceId` INT NOT NULL,
+  `driverId` INT NOT NULL,
+  PRIMARY KEY (`lapId`),
+  INDEX `raceId_idx` (`raceId` ASC) VISIBLE,
+  INDEX `driverId_idx` (`driverId` ASC) VISIBLE,
+  CONSTRAINT `raceId`
+    FOREIGN KEY (`raceId`)
+    REFERENCES `f1record`.`races` (`raceId`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `driverId`
+    FOREIGN KEY (`driverId`)
+    REFERENCES `f1record`.`drivers` (`driverId`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `f1record`.`pit_stops`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `f1record`.`pit_stops` (
+  `pitId` INT NOT NULL,
+  `stop` INT NULL DEFAULT NULL,
+  `lap` INT NULL DEFAULT NULL,
+  `time` VARCHAR(12) NULL DEFAULT NULL,
+  `duration` VARCHAR(12) NULL DEFAULT NULL,
+  `milliseconds` INT NULL DEFAULT NULL,
+  `raceId` INT NOT NULL,
+  `driverId` INT NOT NULL,
+  PRIMARY KEY (`pitId`),
+  INDEX `raceId_idx` (`raceId` ASC) VISIBLE,
+  INDEX `driverId_idx` (`driverId` ASC) VISIBLE,
+  CONSTRAINT `raceId`
+    FOREIGN KEY (`raceId`)
+    REFERENCES `f1record`.`races` (`raceId`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `driverId`
+    FOREIGN KEY (`driverId`)
+    REFERENCES `f1record`.`drivers` (`driverId`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `f1record`.`qualifying`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `f1record`.`qualifying` (
+  `qualifyId` INT NOT NULL,
+  `number` INT NULL DEFAULT NULL,
+  `position` INT NULL DEFAULT NULL,
+  `q1` VARCHAR(12) NULL DEFAULT NULL,
+  `q2` VARCHAR(12) NULL DEFAULT NULL,
+  `q3` VARCHAR(12) NULL DEFAULT NULL,
+  `raceId` INT NOT NULL,
+  `driverId` INT NOT NULL,
+  `constructorId` INT NOT NULL,
+  PRIMARY KEY (`qualifyId`),
+  INDEX `raceId_idx` (`raceId` ASC) VISIBLE,
+  INDEX `driverId_idx` (`driverId` ASC) VISIBLE,
+  INDEX `constructorId_idx` (`constructorId` ASC) VISIBLE,
+  CONSTRAINT `raceId`
+    FOREIGN KEY (`raceId`)
+    REFERENCES `f1record`.`races` (`raceId`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `driverId`
+    FOREIGN KEY (`driverId`)
+    REFERENCES `f1record`.`drivers` (`driverId`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `constructorId`
+    FOREIGN KEY (`constructorId`)
+    REFERENCES `f1record`.`constructors` (`constructorId`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `f1record`.`status`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `f1record`.`status` (
+  `statusId` INT NOT NULL,
+  `status` VARCHAR(50) NULL DEFAULT NULL,
+  PRIMARY KEY (`statusId`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `f1record`.`results`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `f1record`.`results` (
+  `resultId` INT NOT NULL,
+  `number` INT NULL DEFAULT NULL,
+  `grid` INT NULL DEFAULT NULL,
+  `position` VARCHAR(12) NULL DEFAULT NULL,
+  `positionOrder` INT NULL DEFAULT NULL,
+  `points` FLOAT NULL DEFAULT NULL,
+  `laps` INT NULL DEFAULT NULL,
+  `time` VARCHAR(12) NULL DEFAULT NULL,
+  `milliseconds` VARCHAR(12) NULL DEFAULT NULL,
+  `fastestLap` VARCHAR(12) NULL DEFAULT NULL,
+  `fastestLapTime` VARCHAR(12) NULL DEFAULT NULL,
+  `fastestLapSpeed` VARCHAR(12) NULL DEFAULT NULL,
+  `raceId` INT NOT NULL,
+  `driverId` INT NOT NULL,
+  `constructorId` INT NOT NULL,
+  `statusId` INT NOT NULL,
+  PRIMARY KEY (`resultId`),
+  INDEX `raceId_idx` (`raceId` ASC) VISIBLE,
+  INDEX `driverId_idx` (`driverId` ASC) VISIBLE,
+  INDEX `constructorId_idx` (`constructorId` ASC) VISIBLE,
+  INDEX `statusId_idx` (`statusId` ASC) VISIBLE,
+  CONSTRAINT `raceId`
+    FOREIGN KEY (`raceId`)
+    REFERENCES `f1record`.`races` (`raceId`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `driverId`
+    FOREIGN KEY (`driverId`)
+    REFERENCES `f1record`.`drivers` (`driverId`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `constructorId`
+    FOREIGN KEY (`constructorId`)
+    REFERENCES `f1record`.`constructors` (`constructorId`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `statusId`
+    FOREIGN KEY (`statusId`)
+    REFERENCES `f1record`.`status` (`statusId`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `f1record`.`safety_car`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `f1record`.`safety_car` (
+  `safetyId` INT NOT NULL,
+  `grand_prix` VARCHAR(50) NULL DEFAULT NULL,
+  `cause` VARCHAR(50) NULL DEFAULT NULL,
+  `deployed_lap` VARCHAR(50) NULL DEFAULT NULL,
+  `called_in_lap` VARCHAR(50) NULL DEFAULT NULL,
+  `number_full_laps` INT NULL DEFAULT NULL,
+  `year` INT NULL DEFAULT NULL,
+  `raceId` INT NOT NULL,
+  PRIMARY KEY (`safetyId`),
+  INDEX `raceId_idx` (`raceId` ASC) VISIBLE,
+  CONSTRAINT `raceId`
+    FOREIGN KEY (`raceId`)
+    REFERENCES `f1record`.`races` (`raceId`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `f1record`.`sprint_res`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `f1record`.`sprint_res` (
+  `sprintId` INT NOT NULL,
+  `number` INT NULL DEFAULT NULL,
+  `grid` INT NULL DEFAULT NULL,
+  `position` VARCHAR(12) NULL DEFAULT NULL,
+  `positionOrder` INT NULL DEFAULT NULL,
+  `points` BIGINT NULL DEFAULT NULL,
+  `laps` INT NULL DEFAULT NULL,
+  `time` VARCHAR(12) NULL DEFAULT NULL,
+  `milliseconds` VARCHAR(12) NULL DEFAULT NULL,
+  `fastestLap` VARCHAR(12) NULL DEFAULT NULL,
+  `fastestLapTime` VARCHAR(12) NULL DEFAULT NULL,
+  `raceId` INT NOT NULL,
+  `driverId` INT NOT NULL,
+  `constructorId` INT NOT NULL,
+  `statusId` INT NOT NULL,
+  PRIMARY KEY (`sprintId`),
+  INDEX `raceId_idx` (`raceId` ASC) VISIBLE,
+  INDEX `driverId_idx` (`driverId` ASC) VISIBLE,
+  INDEX `constructorId_idx` (`constructorId` ASC) VISIBLE,
+  INDEX `statusId_idx` (`statusId` ASC) VISIBLE,
+  CONSTRAINT `raceId`
+    FOREIGN KEY (`raceId`)
+    REFERENCES `f1record`.`races` (`raceId`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `driverId`
+    FOREIGN KEY (`driverId`)
+    REFERENCES `f1record`.`drivers` (`driverId`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `constructorId`
+    FOREIGN KEY (`constructorId`)
+    REFERENCES `f1record`.`constructors` (`constructorId`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `statusId`
+    FOREIGN KEY (`statusId`)
+    REFERENCES `f1record`.`status` (`statusId`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

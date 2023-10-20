@@ -2,8 +2,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from PIL import Image
-# import fastf1
-# import plotly.graph_objects as go
 
 
 st.set_page_config(page_title='F1 Race Record', page_icon='🏎️', layout='wide', initial_sidebar_state='expanded')
@@ -37,12 +35,12 @@ def show_calendar():
     if st.button('Submit'):
         filtered_calendar = calendar[calendar['year'] == selected_year].sort_values('Round', ascending=True)
 
-        hide_table_row_index = """
+        hide_table_row_index = '''
                     <style>
                     thead tr th:first-child {display:none}
                     tbody th {display:none}
                     </style>
-                    """
+                    '''
 
         st.markdown(hide_table_row_index, unsafe_allow_html=True)
 
@@ -108,12 +106,12 @@ def show_races():
         filtered_details = races[(races['Seasons'] == selected_season) & (races['Races'] == selected_race)][['Grid Position', 'Driver', 'Driver Number', 'Team', 'Q1', 'Q2', 'Q3']]
         filtered_details = filtered_details.sort_values('Grid Position', ascending=True)
         
-        hide_table_row_index = """
+        hide_table_row_index = '''
                     <style>
                     thead tr th:first-child {display:none}
                     tbody th {display:none}
                     </style>
-                    """
+                    '''
 
         st.markdown(hide_table_row_index, unsafe_allow_html=True)
 
@@ -139,61 +137,6 @@ def show_races():
         st.markdown(hide_table_row_index, unsafe_allow_html=True)
 
         st.table(filtered_results)
-
-
-        st.write('')
-        st.write('')
-        st.write('')
-        st.write('---')
-        st.title('Race evolution')
-        st.write('---')
-        st.write('')
-
-        st.image(Image.open('images/spanish_2022.png'))
-
-
-        # selected_year = int(selected_season)
-        # selected_round = races[(races['Seasons'] == selected_season) & (races['Races'] == selected_race)]['Round'].values[0]
-
-
-        # session = fastf1.get_session(selected_year, selected_round, 'R')
-        # session.load(telemetry=False, weather=False)
-
-        # fig = go.Figure()
-
-        # for drv in session.drivers:
-        #     drv_laps = session.laps.pick_driver(drv)
-
-        #     abb = drv_laps['Driver'].iloc[0]
-        #     color = fastf1.plotting.driver_color(abb)
-
-        #     fig.add_trace(go.Scatter(
-        #         x=drv_laps['LapNumber'],
-        #         y=drv_laps['Position'],
-        #         mode='lines',
-        #         name=abb,
-        #         line=dict(color=color)
-        #     ))
-
-        # fig.update_layout(
-        #     title='Race Positions',
-        #     xaxis_title='Lap',
-        #     yaxis_title='Position',
-        #     yaxis=dict(
-        #         range=[20.5, 0.5],
-        #         tickvals=[1, 5, 10, 15, 20]
-        #     ),
-        #     legend=dict(
-        #         x=1.0,
-        #         y=1.02
-        #     ),
-        #     autosize=False,
-        #     width=800,
-        #     height=490
-        # )
-
-        # fig.show(); 
-    
 
 
 sel_page = st.sidebar.radio('**Information**', ('Home', 'Calendar', 'Races'))

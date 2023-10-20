@@ -1,9 +1,6 @@
 -- Number of Grand Prix per year
 
-SELECT * FROM races
-;
-
-SELECT year AS 'Year', COUNT(round) AS 'Number of Grand Prix'
+SELECT races.year AS 'Year', COUNT(races.round) AS 'Number of Grand Prix'
 FROM races
 
 GROUP BY year
@@ -12,21 +9,22 @@ ORDER BY year
 
 -- Circuits that have inaugurated the championship
 
-SELECT circuits.name AS 'Circuit Name', circuits.location AS 'City', circuits.country AS 'Country', count(*) as 'Opening Races Hosted', races.name AS 'Grand Prix Name'
+SELECT races.name AS 'Grand Prix Name', circuits.name AS 'Circuit Name', circuits.location AS 'City', circuits.country AS 'Country', 
+count(*) as 'Opening Races Hosted'
 FROM circuits
-INNER JOIN races
+JOIN races
 ON circuits.circuitId = races.circuitId
 WHERE races.round = 1
 
-GROUP BY circuits.name, circuits.location, circuits.country, races.name
+GROUP BY races.name, circuits.name, circuits.location, circuits.country, races.name
 ORDER BY count(*) DESC
 ;
 
--- 2023 Races
+-- 2023 Calendar
 
 SELECT circuits.name AS 'Circuit Name', circuits.country AS 'Country'
 FROM circuits
-INNER JOIN races
+JOIN races
 ON circuits.circuitId = races.circuitId
 WHERE races.year = 2023
 
@@ -36,24 +34,47 @@ ORDER BY COUNT(races.round) DESC
 
 -- Most popular Grand Prix
 
-SELECT circuits.name AS 'Name', circuits.country AS 'Country', COUNT(races.round) as 'Races'
+SELECT circuits.name AS 'Circuit Name', circuits.country AS 'Country', COUNT(races.round) as 'Races'
 FROM circuits
-INNER JOIN races
+JOIN races
 ON circuits.circuitId = races.circuitId
 
 GROUP BY circuits.name, circuits.country
 ORDER BY Races desc
 ;
 
--- Record of laps per circuit and year
+-- Most safety cars appearances per circuits
 
-SELECT lap_times.raceId AS 'Race ID', lap_times.driverId AS 'Driver ID', lap_times.time AS 'Time', MIN(lap_times.milliseconds) AS 'Elapsed', races.year AS 'Year', circuits.name AS 'Name', circuits.country AS 'Country'
+SELECT circuits.name AS 'Circuit Name', circuits.location AS 'City', circuits.country AS 'Country', COUNT(safety_car.safetyId) AS 'Safety Car Appearances'
+FROM circuits
+JOIN races
+ON circuits.circuitId = races.circuitId
+JOIN safety_car
+ON races.raceId = safety_car.raceId
+
+GROUP BY circuits.name, circuits.location, circuits.country
+ORDER BY COUNT(safety_car.safetyId) DESC
+;
+
+-- Fastest race laps per year, circuit, country and driver
+
+SELECT races.year AS 'Year', circuits.name AS 'Circuit Name', circuits.country AS 'Country', CONCAT(drivers.forename, ' ', drivers.surname) AS 'Driver Name',
+lap_times.time AS 'Fastest Lap Time', MIN(lap_times.milliseconds) AS 'Fastest Lap Time (milliseconds)', lap_times.lap AS 'Lap'
 FROM lap_times
 JOIN races
 ON lap_times.raceId = races.raceId
 JOIN circuits
 ON races.circuitId = circuits.circuitId
+JOIN drivers
+ON lap_times.driverId = drivers.driverId
 
-GROUP BY lap_times.raceId, lap_times.driverId, lap_times.time, races.year, circuits.name, circuits.country
-ORDER BY elapsed DESC
+WHERE (lap_times.raceId, lap_times.milliseconds)
+IN (SELECT raceId, MIN(milliseconds) AS min_time
+    FROM lap_times
+    GROUP BY raceId
+    )
+
+GROUP BY races.year, circuits.name, circuits.country, CONCAT(drivers.forename, ' ', drivers.surname), lap_times.time, lap_times.lap
+ORDER BY races.year DESC, circuits.name
 ;
+

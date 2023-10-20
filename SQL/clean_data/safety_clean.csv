@@ -1,0 +1,302 @@
+,safetyId,raceId,grand_prix,cause,deployed_lap,called_in_lap,number_full_laps,year
+0,1,1095,São Paulo Grand Prix,Accident (Ricciardo and Magnussen),1,6,5,2022
+1,2,1078,Miami Grand Prix,Accident,42,46,3,2022
+2,3,1077,Emilia Romagna Grand Prix,Accident (Sainz),1,4,2,2022
+3,4,1077,Emilia Romagna Grand Prix,Accident (Zhou),1,4,2,2022
+4,5,1076,Australian Grand Prix,Accident (Vettel),23,26,2,2022
+5,6,1076,Australian Grand Prix,Beached car (Sainz),3,6,2,2022
+6,7,1075,Saudi Arabian Grand Prix,Accident,16,20,3,2022
+7,8,1074,Bahrain Grand Prix,Stranded Car,46,50,3,2022
+8,9,1061,British Grand Prix,Accident,1,4 (After red flag),2,2021
+9,10,1052,Bahrain Grand Prix,Accident,1,3,1,2021
+10,11,1053,Emilia Romagna Grand Prix,Accident,2,6,3,2021
+11,12,1053,Emilia Romagna Grand Prix,Accident,32,34 (After red flag),1,2021
+12,13,1054,Portuguese Grand Prix,Accident,2,6,3,2021
+13,14,1055,Spanish Grand Prix,Stranded car,8,10,1,2021
+14,15,1057,Azerbaijan Grand Prix,Accident,31,35,3,2021
+15,16,1057,Azerbaijan Grand Prix,Accident,47,49 (After red flag),1,2021
+16,17,1060,Austrian Grand Prix,Stranded car,1,3,1,2021
+17,18,1063,Belgian Grand Prix,Rain,1 (Race started behind SC),NA (Red flag),2,2021
+18,19,1065,Italian Grand Prix,Accident,26,30,3,2021
+19,20,1070,Mexico City Grand Prix,Accident,1,4,2,2021
+20,21,1071,São Paulo Grand Prix,Debris,6,9,2,2021
+21,22,1072,Saudi Arabian Grand Prix,Accident,10,14 (After red flag),3,2021
+22,23,1073,Abu Dhabi Grand Prix,Accident,53,57,3,2021
+23,24,1062,Hungarian Grand Prix,Accident,1,3 (After red flag),1,2021
+24,25,1039,Tuscan Grand Prix,Accident,1,6,4,2020
+25,26,1034,British Grand Prix,Accident,2,5,2,2020
+26,27,1038,Italian Grand Prix,Stranded car,20,23,2,2020
+27,28,1037,Belgian Grand Prix,Two accidents,11,14,2,2020
+28,29,1034,British Grand Prix,Accident,13,18,4,2020
+29,30,1031,Austrian Grand Prix,Stranded car,26,30,3,2020
+30,31,1032,Styrian Grand Prix,Debris from accident,1,3,1,2020
+31,32,1031,Austrian Grand Prix,Stranded car,55,60,4,2020
+32,33,1031,Austrian Grand Prix,Stranded car,51,54,2,2020
+33,34,1038,Italian Grand Prix,Accident,25,28 (After red flag),2,2020
+34,35,1039,Tuscan Grand Prix,Accident,44,46 (After red flag),1,2020
+35,36,1039,Tuscan Grand Prix,Accident,7,9 (After red flag),1,2020
+36,37,1045,Bahrain Grand Prix,Accident,3,8,4,2020
+37,38,1047,Abu Dhabi Grand Prix,Stranded car,11,13,1,2020
+38,39,1046,Sakhir Grand Prix,Accident,1,6,4,2020
+39,40,1045,Bahrain Grand Prix,Stranded car,55,NA (Race finished behind SC),2,2020
+40,41,1046,Sakhir Grand Prix,Accident,62,68,5,2020
+41,42,1043,Emilia Romagna Grand Prix,Accident,51,57,5,2020
+42,43,1041,Eifel Grand Prix,Stranded car,45,49,3,2020
+43,44,1040,Russian Grand Prix,Two accidents,1,5,3,2020
+44,45,1020,German Grand Prix,Accident,57,59,1,2019
+45,46,1011,Bahrain Grand Prix,Two stranded cars,55,NA (Race finished behind SC),2,2019
+46,47,1014,Spanish Grand Prix,Accident,46,52,5,2019
+47,48,1015,Monaco Grand Prix,Debris from accident,11,14,2,2019
+48,49,1019,British Grand Prix,Accident,20,23,2,2019
+49,50,1020,German Grand Prix,Accident,3,4,0,2019
+50,51,1020,German Grand Prix,Accident,29,33,3,2019
+51,52,1020,German Grand Prix,Accident,41,45,3,2019
+52,53,1024,Singapore Grand Prix,Debris from accident,36,40,3,2019
+53,54,1022,Belgian Grand Prix,Accident,1,4,2,2019
+54,55,1024,Singapore Grand Prix,Stranded car,44,47,2,2019
+55,56,1024,Singapore Grand Prix,Accident,50,51,0,2019
+56,57,1025,Russian Grand Prix,Accident,1,3,1,2019
+57,58,1025,Russian Grand Prix,Accident,29,32,2,2019
+58,59,1029,Brazilian Grand Prix,Stranded car,54,59,4,2019
+59,60,1029,Brazilian Grand Prix,Accident,66,69,2,2019
+60,61,998,British Grand Prix,Accident,33,37,3,2018
+61,62,991,Chinese Grand Prix,Debris from accident,31,35,3,2018
+62,63,992,Azerbaijan Grand Prix,Two accidents,1,4,2,2018
+63,64,992,Azerbaijan Grand Prix,Two accidents,40,47,6,2018
+64,65,993,Spanish Grand Prix,Accident,1,6,4,2018
+65,66,995,Canadian Grand Prix,Accident,1,4,2,2018
+66,67,996,French Grand Prix,Accident,1,5,3,2018
+67,68,989,Australian Grand Prix,Stranded car,28,31,2,2018
+68,69,998,British Grand Prix,Accident,39,41,1,2018
+69,70,1001,Belgian Grand Prix,Accident,1,4,2,2018
+70,71,1002,Italian Grand Prix,Accident,1,3,1,2018
+71,72,1003,Singapore Grand Prix,Accident,1,4,2,2018
+72,73,1005,Japanese Grand Prix,Debris from accident,4,7,2,2018
+73,74,1009,Abu Dhabi Grand Prix,Accident,1,4,2,2018
+74,75,999,German Grand Prix,Accident,52,57,4,2018
+75,76,978,British Grand Prix,Accident,2,4,1,2017
+76,77,970,Chinese Grand Prix,Accident,4,8,3,2017
+77,78,971,Bahrain Grand Prix,Accident,13,16,2,2017
+78,79,975,Canadian Grand Prix,Accident,1,3,1,2017
+79,80,974,Monaco Grand Prix,Accident,60,66,5,2017
+80,81,976,Azerbaijan Grand Prix,Stranded car,12,16,3,2017
+81,82,976,Azerbaijan Grand Prix,Debris from car,17,19,1,2017
+82,83,976,Azerbaijan Grand Prix,Debris from accident,20,23 (After red flag),2,2017
+83,84,972,Russian Grand Prix,Accident,1,3,1,2017
+84,85,979,Hungarian Grand Prix,Accident,1,5,3,2017
+85,86,982,Singapore Grand Prix,Accident,1,4,2,2017
+86,87,982,Singapore Grand Prix,Accident,11,14,2,2017
+87,88,982,Singapore Grand Prix,Accident,38,41,2,2017
+88,89,984,Japanese Grand Prix,Accident,2,3,0,2017
+89,90,987,Brazilian Grand Prix,Accident,1,5,3,2017
+90,91,980,Belgian Grand Prix,Debris from accident,30,33,2,2017
+91,92,960,Belgian Grand Prix,Accident,6,10,3,2016
+92,93,948,Australian Grand Prix,Accident,18,19 (After red flag),0,2016
+93,94,950,Chinese Grand Prix,Debris from car,4,10,5,2016
+94,95,951,Russian Grand Prix,Accident,1,4,2,2016
+95,96,953,Monaco Grand Prix,Rain,1 (Race started behind SC),8,7,2016
+96,97,956,Austrian Grand Prix,Debris from car,27,31,3,2016
+97,98,957,British Grand Prix,Rain,1 (Race started behind SC),6,5,2016
+98,99,962,Singapore Grand Prix,Accident,1,2,0,2016
+99,100,966,Mexican Grand Prix,Accident,1,4,2,2016
+100,101,967,Brazilian Grand Prix,Rain,1 (Race started behind SC),7,6,2016
+101,102,967,Brazilian Grand Prix,Accident,13,20 (Red Flag),6,2016
+102,103,967,Brazilian Grand Prix,Rain,21 (Race resumed behind SC),32 (After red flag),11,2016
+103,104,967,Brazilian Grand Prix,Accident,48,55,6,2016
+104,105,936,Hungarian Grand Prix,Accident,44,48,3,2015
+105,106,927,Malaysian Grand Prix,Accident,4,7,2,2015
+106,107,928,Chinese Grand Prix,Stranded car,54,NA (Race finished behind SC),1,2015
+107,108,931,Monaco Grand Prix,Accident,64,70,5,2015
+108,109,933,Austrian Grand Prix,Accident,1,7,5,2015
+109,110,926,Australian Grand Prix,Accident,1,4,2,2015
+110,111,934,British Grand Prix,Accident,1,4,2,2015
+111,112,941,Russian Grand Prix,Accident,1,4,2,2015
+112,113,939,Singapore Grand Prix,Debris from accident,15,18,2,2015
+113,114,941,Russian Grand Prix,Accident,12,18,5,2015
+114,115,942,United States Grand Prix,Stranded car,27,32,4,2015
+115,116,942,United States Grand Prix,Accident,43,47,3,2015
+116,117,943,Mexican Grand Prix,Accident,52,57,4,2015
+117,118,939,Singapore Grand Prix,Man on track,37,40,2,2015
+118,119,909,German Grand Prix,Accident,1,3,1,2014
+119,120,900,Australian Grand Prix,Debris from car,12,16,3,2014
+120,121,902,Bahrain Grand Prix,Accident,42,46,3,2014
+121,122,905,Monaco Grand Prix,Accident,26,30,3,2014
+122,123,906,Canadian Grand Prix,Accident,1,8,6,2014
+123,124,906,Canadian Grand Prix,Accident,68,70 (finished under the SC),1,2014
+124,125,908,British Grand Prix,Accident,1,2 (After red flag),0,2014
+125,126,905,Monaco Grand Prix,Accident,1,5,3,2014
+126,127,910,Hungarian Grand Prix,Two accidents,8,14,5,2014
+127,128,910,Hungarian Grand Prix,Accident,23,28,4,2014
+128,129,913,Singapore Grand Prix,Debris from accident,31,37,5,2014
+129,130,914,Japanese Grand Prix,Rain,1 (Race started behind SC),3 (After red flag),2,2014
+130,131,914,Japanese Grand Prix,Rain,3 (Race resumed behind SC),9,6,2014
+131,132,914,Japanese Grand Prix,Accident,44,NA (Red flag),4,2014
+132,133,916,United States Grand Prix,Accident,1,5,3,2014
+133,134,885,Monaco Grand Prix,Accident,31,38,6,2013
+134,135,885,Monaco Grand Prix,Accident,47 (Resumed behind SC),47,0,2013
+135,136,885,Monaco Grand Prix,Accident,63,67,3,2013
+136,137,887,British Grand Prix,Debris from car,16,21,4,2013
+137,138,887,British Grand Prix,Stranded car,42,45,2,2013
+138,139,888,German Grand Prix,Stranded car,24,29,4,2013
+139,140,893,Singapore Grand Prix,Accident,25,30,4,2013
+140,141,894,Korean Grand Prix,Debris,31,36,4,2013
+141,142,894,Korean Grand Prix,Vehicle on track,38,40,1,2013
+142,143,898,United States Grand Prix,Accident,1,5,3,2013
+143,144,873,Singapore Grand Prix,Accident,33,38,4,2012
+144,145,879,Brazilian Grand Prix,Accident,70,NA (Race finished behind SC),1,2012
+145,146,879,Brazilian Grand Prix,Debris,23,29,5,2012
+146,147,877,Abu Dhabi Grand Prix,Accident,39,42,2,2012
+147,148,877,Abu Dhabi Grand Prix,Accident,9,14,4,2012
+148,149,874,Japanese Grand Prix,Accident,1,2,0,2012
+149,150,873,Singapore Grand Prix,Accident,40,42,1,2012
+150,151,871,Belgian Grand Prix,Accident,1,5,3,2012
+151,152,865,Monaco Grand Prix,Accident,2,3,0,2012
+152,153,861,Malaysian Grand Prix,Rain,10 (Race resumed behind SC),15,5,2012
+153,154,861,Malaysian Grand Prix,Rain,6,10 (After red flag),4,2012
+154,155,860,Australian Grand Prix,Stranded car,37,42,4,2012
+155,156,867,European Grand Prix,Debris from accident,28,33,4,2012
+156,157,847,Canadian Grand Prix,Rain,20,26 (After red flag),6,2011
+157,158,847,Canadian Grand Prix,Accident,37,40,2,2011
+158,159,846,Monaco Grand Prix,Accident,35,39,3,2011
+159,160,847,Canadian Grand Prix,Rain,1 (Race started behind SC),6,5,2011
+160,161,847,Canadian Grand Prix,Accident,8,13,4,2011
+161,162,847,Canadian Grand Prix,Rain,26 (Race resumed behind SC),34,8,2011
+162,163,847,Canadian Grand Prix,Debris from accident,56,61,4,2011
+163,164,852,Belgian Grand Prix,Accident,13,17,3,2011
+164,165,853,Italian Grand Prix,Accident,1,4,3,2011
+165,166,854,Singapore Grand Prix,Accident,30,34,3,2011
+166,167,855,Japanese Grand Prix,Debris from accident,24,28,3,2011
+167,168,856,Korean Grand Prix,Accident,17,21,3,2011
+168,169,342,Monaco Grand Prix,Accident,31,34,2,2010
+169,170,346,British Grand Prix,Debris from car,28,31,2,2010
+170,171,345,European Grand Prix,Accident,10,15,4,2010
+171,172,342,Monaco Grand Prix,Accident,75,NA (Race finished behind SC),3,2010
+172,173,342,Monaco Grand Prix,Loose drain cover,43,46,2,2010
+173,174,340,Chinese Grand Prix,Accident,1,4,2,2010
+174,175,342,Monaco Grand Prix,Accident,1,7,5,2010
+175,176,340,Chinese Grand Prix,Debris from accident,22,26,3,2010
+176,177,338,Australian Grand Prix,Accident,2,5,2,2010
+177,178,349,Belgian Grand Prix,Accident,2,4,1,2010
+178,179,348,Hungarian Grand Prix,Debris from car,15,18,2,2010
+179,180,353,Korean Grand Prix,Rain,4 (Race resumed behind SC),18,14,2010
+180,181,349,Belgian Grand Prix,Accident,38,41,2,2010
+181,182,351,Singapore Grand Prix,Accident,3,6,2,2010
+182,183,351,Singapore Grand Prix,Accident,31,36,4,2010
+183,184,352,Japanese Grand Prix,Accident,1,7,5,2010
+184,185,353,Korean Grand Prix,Rain,1 (Race started behind SC),4 (After red flag),3,2010
+185,186,353,Korean Grand Prix,Accident,19,24,4,2010
+186,187,353,Korean Grand Prix,Accident,31,35,3,2010
+187,188,354,Brazilian Grand Prix,Accident,51,56,4,2010
+188,189,355,Abu Dhabi Grand Prix,Accident,1,6,4,2010
+189,190,5,Spanish Grand Prix,Accident,1,5,3,2009
+190,191,1,Australian Grand Prix,Accident,19,24,4,2009
+191,192,1,Australian Grand Prix,Accident,55,NA (Race finished behind SC),3,2009
+192,193,2,Malaysian Grand Prix,Rain,31,NA (Red flag),1,2009
+193,194,3,Chinese Grand Prix,Rain,1 (Race started behind SC),8,7,2009
+194,195,3,Chinese Grand Prix,Debris from accident,18,22,3,2009
+195,196,16,Brazilian Grand Prix,Accident,1,6,5,2009
+196,197,12,Belgian Grand Prix,Accident,1,5,3,2009
+197,198,14,Singapore Grand Prix,Accident,21,27,5,2009
+198,199,15,Japanese Grand Prix,Accident,1,7,5,2009
+199,200,13,Italian Grand Prix,Accident,53,NA (Race finished behind SC),1,2009
+200,201,23,Monaco Grand Prix,Accident,62,67,4,2008
+201,202,18,Australian Grand Prix,Accident,1,3,1,2008
+202,203,18,Australian Grand Prix,Accident,26,30,3,2008
+203,204,18,Australian Grand Prix,Accident,44,47,2,2008
+204,205,21,Spanish Grand Prix,Accident,1,4,2,2008
+205,206,22,Turkish Grand Prix,Accident,1,3,1,2008
+206,207,23,Monaco Grand Prix,Accident,8,11,2,2008
+207,208,21,Spanish Grand Prix,Accident,22,29,6,2008
+208,209,24,Canadian Grand Prix,Stranded car,16,22,5,2008
+209,210,31,Italian Grand Prix,Rain,1 (Race started behind SC),3,2,2008
+210,211,32,Singapore Grand Prix,Accident,14,20,5,2008
+211,212,32,Singapore Grand Prix,Accident,46,53,6,2008
+212,213,35,Brazilian Grand Prix,Accident,1,4,2,2008
+213,214,27,German Grand Prix,Accident,36,42,5,2008
+214,215,41,Canadian Grand Prix,Accident,55,60,4,2007
+215,216,38,Bahrain Grand Prix,Accident,1,4,2,2007
+216,217,41,Canadian Grand Prix,Accident,22,26,3,2007
+217,218,41,Canadian Grand Prix,Accident,26,34,7,2007
+218,219,41,Canadian Grand Prix,Debris from accident,50,54,3,2007
+219,220,50,Japanese Grand Prix,Rain,1 (Race started behind SC),20,19,2007
+220,221,45,European Grand Prix,Accidents,3,7 (After red flag),3,2007
+221,222,48,Italian Grand Prix,Accident,1,7,5,2007
+222,223,50,Japanese Grand Prix,Accident,41,48,6,2007
+223,224,55,Australian Grand Prix,Accident,36,40,3,2006
+224,225,55,Australian Grand Prix,Accident,32,35,2,2006
+225,226,65,Hungarian Grand Prix,Accident,26,31,4,2006
+226,227,55,Australian Grand Prix,Accident,8,10,1,2006
+227,228,55,Australian Grand Prix,Accident,1,3,1,2006
+228,229,59,Monaco Grand Prix,Stranded car,47,49,1,2006
+229,230,56,San Marino Grand Prix,Accident,1,3,1,2006
+230,231,66,Turkish Grand Prix,Stranded car,13,16,2,2006
+231,232,60,British Grand Prix,Accident,2,4,1,2006
+232,233,61,Canadian Grand Prix,Accident,61,64,2,2006
+233,234,62,United States Grand Prix,Two accidents,1,7,5,2006
+234,235,61,Canadian Grand Prix,Accident,2,4,1,2006
+235,236,70,Brazilian Grand Prix,Accident,2,6,3,2006
+236,237,89,Chinese Grand Prix,Accident,29,35,5,2005
+237,238,89,Chinese Grand Prix,Loose drain cover,19,25,5,2005
+238,239,88,Japanese Grand Prix,Accident,1,8,6,2005
+239,240,86,Belgian Grand Prix,Accident,11,14,2,2005
+240,241,81,British Grand Prix,Accident,1,3,1,2005
+241,242,78,Canadian Grand Prix,Accident,46,52,5,2005
+242,243,76,Monaco Grand Prix,Stranded car,25,29,3,2005
+243,244,98,United States Grand Prix,Accident,11,20,8,2004
+244,245,95,Monaco Grand Prix,Accident,3,8,4,2004
+245,246,95,Monaco Grand Prix,Accident,32,37,4,2004
+246,247,98,United States Grand Prix,Accident,1,6,4,2004
+247,248,103,Belgian Grand Prix,Accident,1,5,3,2004
+248,249,103,Belgian Grand Prix,Accident,31,34,2,2004
+249,250,103,Belgian Grand Prix,Debris from accident,38,42,3,2004
+250,251,118,British Grand Prix,Man on track,12,15,2,2003
+251,252,118,British Grand Prix,Debris from car,5,7,1,2003
+252,253,113,Austrian Grand Prix,Stranded car,1,5,3,2003
+253,254,110,Brazilian Grand Prix,Two accidents,54,NA (Red flag),2,2003
+254,255,110,Brazilian Grand Prix,Accident,33,37,3,2003
+255,256,110,Brazilian Grand Prix,Three accidents,27,30,2,2003
+256,257,110,Brazilian Grand Prix,Accident,18,24,5,2003
+257,258,110,Brazilian Grand Prix,Rain,1 (Race started behind SC),9,8,2003
+258,259,108,Australian Grand Prix,Stranded car,16,20,3,2003
+259,260,108,Australian Grand Prix,Two accidents,8,11,2,2003
+260,261,129,Austrian Grand Prix,Stranded car,24,28,3,2002
+261,262,124,Australian Grand Prix,Accident,9,12,2,2002
+262,263,124,Australian Grand Prix,Accident,1,6,4,2002
+263,264,129,Austrian Grand Prix,Accident,28,37,8,2002
+264,265,131,Canadian Grand Prix,Stranded car,14,17,2,2002
+265,266,148,Canadian Grand Prix,Accident,21,24,2,2001
+266,267,146,Austrian Grand Prix,Four stranded cars,1,4,2,2001
+267,268,143,Brazilian Grand Prix,Stranded car,1,3,1,2001
+268,269,142,Malaysian Grand Prix,Rain,4,11,6,2001
+269,270,141,Australian Grand Prix,Accident,5,15,9,2001
+270,271,154,Belgian Grand Prix,Accident,6,7 (After red flag),1,2001
+271,272,171,Italian Grand Prix,Multiple accidents,1,12,11,2000
+272,273,168,German Grand Prix,Man on track,25,29,3,2000
+273,274,158,Australian Grand Prix,Accident,7,11,3,2000
+274,275,167,Austrian Grand Prix,Accident,1,3,1,2000
+275,276,174,Malaysian Grand Prix,Accident,1,3,1,2000
+276,277,168,German Grand Prix,Accident,30,32,1,2000
+277,278,170,Belgian Grand Prix,Rain,1 (Race started behind SC),2,1,2000
+278,279,180,Canadian Grand Prix,Accident,3,8,4,1999
+279,280,175,Australian Grand Prix,Accident,20,25,4,1999
+280,281,180,Canadian Grand Prix,Accident,1,3,1,1999
+281,282,175,Australian Grand Prix,Accident,15,17,1,1999
+282,283,180,Canadian Grand Prix,Accident,66,NA (Race finished behind SC),3,1999
+283,284,180,Canadian Grand Prix,Accident,35,41,5,1999
+284,285,181,French Grand Prix,Stranded car/Rain,25,36,10,1999
+285,286,188,European Grand Prix,Accident,1,6,4,1999
+286,287,203,Belgian Grand Prix,Accident,28,33,4,1998
+287,288,200,Austrian Grand Prix,Two accidents,1,4,2,1998
+288,289,199,British Grand Prix,Rain,42,49,6,1998
+289,290,197,Canadian Grand Prix,Accident,20,22,1,1998
+290,291,197,Canadian Grand Prix,Debris,15,18,2,1998
+291,292,197,Canadian Grand Prix,Accident,1,6,4,1998
+292,293,218,Belgian Grand Prix,Rain,1 (Race started behind SC),4,3,1997
+293,294,209,Argentine Grand Prix,Accident,1,6,4,1997
+294,295,236,Belgian Grand Prix,Accident,13,18,4,1996
+295,296,226,Argentine Grand Prix,Accident,28,33,4,1996
+296,297,250,Belgian Grand Prix,Rain,28,33,4,1995
+297,298,259,San Marino Grand Prix,Accident,1,6,4,1994
+298,299,281,British Grand Prix,Stranded car,38,40,1,1993
+299,300,274,Brazilian Grand Prix,Accident/Rain,29,38,8,1993
+300,301,618,Canadian Grand Prix,Accident,33,39,5,1973
