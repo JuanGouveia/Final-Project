@@ -85,9 +85,7 @@ En la fase de extracción, nos enfocamos en recopilar información histórica de
 
 En la fase de transformación, realizamos varias acciones en los datos recopilados:
 
-- Descargamos y procesamos los archivos CSV de Kaggle, renombrando las columnas según nuestros objetivos, eliminando las columnas innecesarias para nuestra investigación y refinando los detalles.
-
-![Races](visualization/images/races_raw.png)
+- Descargamos y procesamos los archivos CSV de [kaggle](https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020), renombrando las columnas según nuestros objetivos, eliminando las columnas innecesarias para nuestra investigación y refinando los detalles.
 
 - Al realizar web scraping en la página de [f1.fandom.com](https://f1.fandom.com/wiki/Safety_Car), ajustamos los nombres de las columnas, creamos una nueva columna para separar los años de los Grand Prix y realizamos otros ajustes finales.
 
@@ -125,8 +123,6 @@ El modelo entidad-relación de nuestra base de datos consta de varias tablas que
 9. **Tabla 'circuits':** Contiene datos sobre los circuitos utilizados en la Fórmula 1 y se relaciona exclusivamente con 'races'.
 
 10. **Tabla 'safety_car':** Registra información sobre los coches de seguridad que han aparecido en la historia de la Fórmula 1 y se relaciona exclusivamente con 'races'.
-</details>
-
 
 </details>
 
