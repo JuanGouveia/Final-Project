@@ -37,7 +37,7 @@ Nuestro objetivo principal como analistas de datos es realizar procesos de ETL y
 
 Un objetivo secundario consiste en materializar todo lo anterior en una página web. Esta plataforma permitirá una visualización más accesible y táctil de nuestro trabajo. Además, elaboraremos un modelo de aprendizaje para lograr el objetivo de predecir la aparición de un Safety Car en una carrera de Fórmula 1.
 
- <a name="análisis"/>
+<a name="análisis"/>
 
 ## Análisis
 
@@ -45,13 +45,23 @@ En esta sección, vamos a explicar y desarrollar cada uno de los componentes en 
 
 <a name="etl"/>
 
-### Extracción, Transformación y Carga (ETL)
+## Extracción, Transformación y Carga (ETL)
 
 **Extracción:**
 
 En la fase de extracción, nos enfocamos en recopilar información histórica de la Fórmula 1. Utilizamos un dataset de Kaggle como nuestra principal referencia, pero también exploramos otras fuentes para enriquecer nuestros datos. Las principales metodologías de extracción que empleamos son las siguientes:
 
-- Descargamos archivos CSV desde Kaggle, que contienen datos valiosos sobre la Fórmula 1.
+- Descargamos archivos CSV desde [kaggle](https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020), que contienen datos valiosos sobre la Fórmula 1.
+
+- Utilizamos Selenium para realizar web scraping en la página de [f1.fandom.com](https://f1.fandom.com/wiki/Safety_Car), con el objetivo de obtener información adicional relevante.
+
+- Instalamos la librería de Python [fastf1](https://pypi.org/project/fastf1/), para extraer datos detallados sobre el desempeño de las carreras y obtener gráficos relacionados.
+
+**Transformación:**
+
+En la fase de transformación, realizamos varias acciones en los datos recopilados:
+
+- Descargamos y procesamos los archivos CSV de kaggle, renombrando las columnas según nuestros objetivos, eliminando las columnas innecesarias para nuestra investigación y refinando los detalles.
 
 <details>
 <summary><b>https://www.kaggle.com/</b></summary>
@@ -61,35 +71,25 @@ En la fase de extracción, nos enfocamos en recopilar información histórica de
 
 </details>
 
-- Utilizamos Selenium para realizar web scraping en páginas web con el objetivo de obtener información adicional relevante.
+- Al realizar el web scraping, ajustamos los nombres de las columnas, creamos una nueva columna para separar los años de los grandes premios y realizamos otros ajustes finales.
 
 <details>
-<summary><b>https://f1.fandom.com/wiki/Safety_Car</b></summary>
+<summary><b>https://f1.fandom.com/</b></summary>
 <br>
 
-![F1 Dataset](visualization/images/wiki_f1.png)
+![F1 Dataset](visualization/images//wiki_f1.png)
 
 </details>
 
-- Instalamos la librería de Python 'fastf1' para extraer datos detallados sobre el desempeño de las carreras y obtener gráficos relacionados.
+- Utilizamos la librería 'fastf1' para obtener datos sobre el rendimiento de las carreras, lo que nos permite generar gráficos informativos.
 
 <details>
-<summary><b>https://pypi.org/project/fastf1/2.2.8/</b></summary>
+<summary><b>https://pypi.org/</b></summary>
 <br>
 
-![F1 Dataset](visualization/images/fast_f1.png)
+![F1 Dataset](visualization/images//fast_f1.png)
 
 </details>
-
-**Transformación:**
-
-En la fase de transformación, realizamos varias acciones en los datos recopilados:
-
-- Descargamos y procesamos los archivos CSV de [kaggle](https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020), renombrando las columnas según nuestros objetivos, eliminando las columnas innecesarias para nuestra investigación y refinando los detalles.
-
-- Al realizar web scraping en la página de [f1.fandom.com](https://f1.fandom.com/wiki/Safety_Car), ajustamos los nombres de las columnas, creamos una nueva columna para separar los años de los Grand Prix y realizamos otros ajustes finales.
-
-- Utilizamos la librería [fastf1](https://pypi.org/project/fastf1/) para obtener datos sobre el rendimiento de las carreras, lo que nos permite generar gráficos informativos.
 
 **Carga:**
 
@@ -129,3 +129,4 @@ El modelo entidad-relación de nuestra base de datos consta de varias tablas que
 <a name="consultas"/>
 
 ## Consultas
+
