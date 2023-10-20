@@ -64,7 +64,7 @@ En la fase de transformación, realizamos varias acciones en los datos recopilad
 - Descargamos y procesamos los archivos CSV de kaggle, renombrando las columnas según nuestros objetivos, eliminando las columnas innecesarias para nuestra investigación y refinando los detalles.
 
 <details>
-<summary><b>https://www.kaggle.com/</b></summary>
+<summary><b>DETALLES DE KAGGLE</b></summary>
 <br>
 
 ![F1 Dataset](visualization/images/races_raw.png)
@@ -74,7 +74,7 @@ En la fase de transformación, realizamos varias acciones en los datos recopilad
 - Al realizar el web scraping, ajustamos los nombres de las columnas, creamos una nueva columna para separar los años de los grandes premios y realizamos otros ajustes finales.
 
 <details>
-<summary><b>https://f1.fandom.com/</b></summary>
+<summary><b>DETALLES DEL WEB SCRAPING</b></summary>
 <br>
 
 ![F1 Safety Car](visualization/images/safety_raw.png)
@@ -84,7 +84,7 @@ En la fase de transformación, realizamos varias acciones en los datos recopilad
 - Utilizamos la librería 'fastf1' para obtener datos sobre el rendimiento de las carreras, lo que nos permite generar gráficos informativos.
 
 <details>
-<summary><b>https://pypi.org/</b></summary>
+<summary><b>DETALLES DE FASTF1</b></summary>
 <br>
 
 ![Fastf1](visualization/images/fastf1_raw.png)
