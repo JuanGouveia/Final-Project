@@ -9,9 +9,10 @@
 3. [Análisis](#análisis)
 4. [Extracción, Transformación y Carga (ETL)](#etl)
 5. [Consultas](#consultas)
-6. [](#)
-7. [](#)
-8. [Conclusiones](#conclusiones)
+6. [Análisis Exploratorio de Datos (EDA)](#eda)
+7. [Desarrollo de la Página Web](#página)
+8. [Modelo de Aprendizaje](#modelo)
+9. [Conclusiones](#conclusiones)
 
 <a name="descripción"/>
 
@@ -135,93 +136,86 @@ El modelo entidad-relación de nuestra base de datos consta de varias tablas que
 Una vez que hemos establecido nuestra base de datos con sus respectivas relaciones, procedemos a realizar algunas consultas de interés que nos ayudarán a encontrar información necesaria para nuestro archivo histórico de la Fórmula 1. Estas consultas están diseñadas para obtener datos relevantes, realizar análisis y explorar aspectos de la Fórmula 1 a través de nuestra base de datos. Todas las consultas se realizan mediante SQLAlchemy y se limitan a mostrar los primeros 10 resultados.
 
 <details>
-<summary><b>Número de Grandes Premios por Año</b></summary>
+<summary><b>Número de Grandes Premios por año</b></summary>
 <br>
 
 ![Grand Prix](visualization/images/gp.png)
 
 </details>
 
-### Circuitos que han Inaugurado el Campeonato en Más Ocasiones
 <details>
-<summary><b>Ver Consulta</b></summary>
+<summary><b>Circuitos que han inaugurado el campeonato en más ocasiones</b></summary>
 <br>
 
 ![Opening Races](visualization/images/open_races.png)
 
 </details>
 
-### Calendario del 2023
 <details>
-<summary><b>Ver Consulta</b></summary>
+<summary><b>Calendario del 2023</b></summary>
 <br>
 
 ![Calendar](visualization/images/calendar.png)
 
 </details>
 
-### Grandes Premios Disputados en Más Ocasiones a lo Largo de la Historia
 <details>
-<summary><b>Ver Consulta</b></summary>
+<summary><b>Grandes Premios disputados en más ocasiones a lo largo de la historia</b></summary>
 <br>
 
 ![Race Number](visualization/images/race_num.png)
 
 </details>
 
-### Más Apariciones de Coches de Seguridad por Circuitos
 <details>
-<summary><b>Ver Consulta</b></summary>
+<summary><b>Más apariciones de coches de seguridad por circuitos</b></summary>
 <br>
 
 ![SC](visualization/images/sc.png)
 
 </details>
 
-### Vueltas Más Rápidas Registradas en Cada Carrera por Año, Circuito, País y Piloto
 <details>
-<summary><b>Ver Consulta</b></summary>
+<summary><b>Vueltas más rápidas registradas en cada carrera por año, circuito, país y piloto</b></summary>
 <br>
 
 ![Fast Lap](visualization/images/fast_lap.png)
 
 </details>
 
-### Más Victorias por Escudería con Respecto a sus Respectivos Pilotos
 <details>
-<summary><b>Ver Consulta</b></summary>
+<summary><b>Más victorias por escudería con respecto a sus respectivos pilotos</b></summary>
 <br>
 
 ![Team Wins](visualization/images/team_win.png)
 
 </details>
 
-### Estado del Piloto con Respecto al Total de sus Carreras Disputadas
 <details>
-<summary><b>Ver Consulta</b></summary>
+<summary><b>Estado del piloto con respecto al total de sus carreras disputadas</b></summary>
 <br>
 
 ![Status](visualization/images/status.png)
 
 </details>
 
-### Media de Velocidad en la Vuelta Rápida
 <details>
-<summary><b>Ver Consulta</b></summary>
+<summary><b>Media de velocidad en la vuelta rápida</b></summary>
 <br>
 
 ![Pace](visualization/images/pace.png)
 
 </details>
 
-### Ganadores de Carreras en la Fórmula 1
 <details>
-<summary><b>Ver Consulta</b></summary>
+<summary><b>Ganadores de carreras en la Fórmula 1</b></summary>
 <br>
 
 ![Driver Wins](visualization/images/driver_win.png)
 
 </details>
 
+<a name="eda"/>
 
-## 
+## Análisis Exploratorio de Datos (EDA)
+
