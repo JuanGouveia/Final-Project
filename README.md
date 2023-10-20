@@ -9,7 +9,9 @@
 3. [Análisis](#análisis)
 4. [Extracción, Transformación y Carga (ETL)](#etl)
 5. [Consultas](#consultas)
-4. [Conclusiones](#conclusiones)
+6. [](#)
+7. [](#)
+8. [Conclusiones](#conclusiones)
 
 <a name="descripción"/>
 
@@ -130,3 +132,88 @@ El modelo entidad-relación de nuestra base de datos consta de varias tablas que
 
 ## Consultas
 
+Una vez que hemos establecido nuestra base de datos con sus respectivas relaciones, procedemos a realizar algunas consultas de interés que nos ayudarán a encontrar información necesaria para nuestro archivo histórico de la Fórmula 1. Estas consultas están diseñadas para obtener datos relevantes, realizar análisis, entre otras cosas acerca de nuestro archivo histórico. A través de estas consultas, podremos acceder a información actualizada y significativa sobre las carreras, los pilotos, las escuderias y otras métricas clave que nos permitirán visualizar aspectos de la Fórmula 1. 
+
+Todas las consultas que mostraremos a continuación están hechas a través de SQLAlchemy, y cada una de ellas tiene un 'head(10)' para mostrar los primeros 10 valores que aparezcan, por eso las imagenes que mostraremos a contniuación estan limitadas a 10 resultados por cada una de ellas.
+
+<details>
+<summary><b>NÚMERO DE GRANDES PREMIOS POR AÑO</b></summary>
+<br>
+
+![Grand Prix](visualization/images/gp.png)
+
+</details>
+
+<details>
+<summary><b>CIRCUITOS QUE HAN INAUGURADO EL CAMPEONATO EN MÁS OCASIONES</b></summary>
+<br>
+
+![Opening Races](visualization/images/open_races.png)
+
+</details>
+
+<details>
+<summary><b>CALENDARIO DEL 2023</b></summary>
+<br>
+
+![Calendar](visualization/images/calendar.png)
+
+</details>
+
+<details>
+<summary><b>GRANDES PREMIOS DISPUTADOS EN MÁS OCASIONES A LO LARGO DE LA HISTORIA</b></summary>
+<br>
+
+![Race Number](visualization/images/race_num.png)
+
+</details>
+
+<details>
+<summary><b>MÁS APARICIONES DE COCHES DE SEGURIDAD POR CIRCUITOS</b></summary>
+<br>
+
+![SC](visualization/images/sc.png)
+
+</details>
+
+<details>
+<summary><b>VUELTAS MÁS RÁPIDAS REGISTRADAS EN CADA CARRERA POR AÑO, CIRCUITO, PAÍS Y PILOTO</b></summary>
+<br>
+
+![Fast Lap](visualization/images/fast_lap.png)
+
+</details>
+
+<details>
+<summary><b>MÁS VICTORIAS POR ESCUDERÍA CON RESPECTO A SUS RESPECTIVOS PILOTOS</b></summary>
+<br>
+
+![Team Wins](visualization/images/team_win.png)
+
+</details>
+
+<details>
+<summary><b>ESTADO DEL PILOTO CON RESPECTO AL TOTAL DE SUS CARRERAS DISPUTADAS</b></summary>
+<br>
+
+![Status](visualization/images/status.png)
+
+</details>
+
+<details>
+<summary><b>MEDIA DE VELOCIDAD EN LA VUELTA RÁPIDA</b></summary>
+<br>
+
+![Pace](visualization/images/pace.png)
+
+</details>
+
+<details>
+<summary><b>GANADORES DE CARRERAS EN LA FÓRMULA 1</b></summary>
+<br>
+
+![Driver Wins](visualization/images/driver_win.png)
+
+</details>
+
+## 
