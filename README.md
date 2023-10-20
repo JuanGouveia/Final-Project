@@ -133,7 +133,9 @@ El modelo entidad-relación de nuestra base de datos consta de varias tablas que
 
 ## Consultas
 
-Una vez que hemos establecido nuestra base de datos con sus respectivas relaciones, procedemos a realizar algunas consultas de interés que nos ayudarán a encontrar información necesaria para nuestro archivo histórico de la Fórmula 1. Estas consultas están diseñadas para obtener datos relevantes, realizar análisis y explorar aspectos de la Fórmula 1 a través de nuestra base de datos. Todas las consultas se realizan mediante SQLAlchemy y se limitan a mostrar los primeros 10 resultados.
+Una vez que hemos establecido nuestra base de datos con sus respectivas relaciones, procedemos a realizar algunas consultas de interés que nos ayudarán a encontrar información necesaria para nuestro archivo histórico de la Fórmula 1. Estas consultas están diseñadas para obtener datos relevantes, realizar análisis y explorar aspectos de la Fórmula 1 a través de nuestra base de datos. 
+
+Todas las consultas se realizan mediante SQLAlchemy y se limitan a mostrar los primeros 10 resultados.
 
 <details>
 <summary><b>Número de Grandes Premios por año</b></summary>
