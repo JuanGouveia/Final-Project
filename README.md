@@ -13,6 +13,7 @@
 7. [Desarrollo de la Página Web](#página)
 8. [Modelo de Aprendizaje](#modelo)
 9. [Conclusiones](#conclusiones)
+10. [Enlaces](#enlaces)
 
 <a name="descripción"/>
 
@@ -223,7 +224,7 @@ Todas las consultas se realizan mediante SQLAlchemy y se limitan a mostrar los p
 
 El objetivo de nuestro EDA es representar gráfica y visualmente los datos que hemos descubierto mediante un análisis y representar y explicar cada uno de ellos. Nos encargaremos de visualizar la distribución de variables clave en nuestro conjunto de datos, examinar cómo han evolucionado ciertas métricas a lo largo de las temporadas de la Fórmula 1, investigar los desempeños de pilotos y equipos a lo largo del tiempo, realizar comparaciones entre diferentes pilotos o equipos y comparar diferentes épocas en la Fórmula 1.
 
-### Dashboard de EDA
+### Dashboard
 
 A continuación, observamos el siguiente dashboard que hemos realizado y las conclusiones a las que hemos llegado:
 
@@ -272,4 +273,62 @@ Tomamos como referencia el período de tiempo desde 1973 hasta 2022, ya que a pe
 <a name="página"/>
 
 ## Desarrollo de la Página Web
+
+Después de completar nuestros objetivos principales, es el momento de materializar todo el trabajo que hemos logrado hasta aquí de una manera más visual e interactiva. A pesar de no ser nuestro campo principal, nos disponemos a construir una página web con Streamlit con el objetivo principal de elaborar un archivo histórico de los datos que hemos obtenido de la historia de la Fórmula 1. Además, nos proponemos agregar dos secciones adicionales: una que contenga un calendario con información de las carreras que se disputaron y se disputarán en cada año de la Fórmula 1, y otra con información de cada Gran Premio disputado en la historia de la Fórmula 1.
+
+Como objetivo secundario, introduciremos un gráfico con el desempeño de carrera de cada Gran Premio, incluyendo pilotos que hayan finalizado o no la carrera, descalificaciones, amonestaciones, etc.
+
+### Página Web
+
+A continuación, observamos las siguientes imágenes de nuestra página web y de cada uno de los apartados explicados anteriormente:
+
+- En este apartado nos dedicamos a dar la bienvenida a nuestra página web y explicar la función de la misma.
+
+<details>
+<summary><b>Home</b></summary>
+<br>
+
+![Home](visualization/images/sl_home.png)
+
+</details>
+
+- En este apartado, podemos ver una barra de búsqueda desplegable con todos los años en los que se han disputado los campeonatos de la Fórmula 1. Al seleccionar algún año y pulsar en el botón 'Submit', se mostrará el calendario de carreras del año seleccionado con información acerca de cada uno de los circuitos disputados en ese año.
+
+<details>
+<summary><b>Calendar</b></summary>
+<br>
+
+![Calendar](visualization/images/sl_calendar1.png)
+
+</details>
+
+<details>
+<summary><b>Search</b></summary>
+<br>
+
+![Calendar](visualization/images/sl_calendar2.png)
+
+</details>
+
+- En este apartado, podemos ver dos barras de búsqueda desplegables. En la primera, podemos seleccionar la temporada que deseemos, y en la segunda, podemos seleccionar el Gran Premio que deseemos disponible según la temporada que hayamos seleccionado previamente. Al seleccionar el año y el circuito deseados y pulsar el botón 'Submit', se mostrará en primer lugar un encabezado con la información del circuito, el piloto que hizo la pole y el piloto que ganó el Gran Premio.
+
+A partir de ahí, tendremos tres secciones: la sección 'Qualification results', que contendrá información de todas las sesiones de clasificación disputadas en ese Gran Premio; la sección 'Race results', que contendrá la información de la carrera disputada en ese Gran Premio; y, por último, la sección 'Race evolution', que contendrá un gráfico con el desempeño de la carrera disputada en ese Gran Premio.
+
+<details>
+
+<details>
+<summary><b>Races</b></summary>
+<br>
+
+![Search](visualization/images/sl_races1.png)
+![Qualy](visualization/images/sl_races2.png)
+![Results](visualization/images/sl_races3.png)
+![Evolution](visualization/images/sl_races4.png)
+![Graph](visualization/images/sl_races5.png)
+
+</details>
+
+<a name="modelo"/>
+
+## Modelo de Aprendizaje
 

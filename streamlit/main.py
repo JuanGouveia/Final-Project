@@ -99,7 +99,7 @@ def show_races():
 
         st.write('')
         st.write('---')
-        st.title('Qualifications results')
+        st.title('Qualification results')
         st.write('---')
         st.write('')
 
