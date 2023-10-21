@@ -330,3 +330,105 @@ A continuación, observamos las siguientes imágenes de nuestra página web y de
 
 ## Modelo de Aprendizaje
 
+Para concluir nuestro proyecto, decidimos realizar un estudio sobre la probabilidad de la aparición del coche de seguridad en una carrera de un Gran Premio de Fórmula 1. Nos enfocamos en el Gran Premio de España y recopilamos datos históricos del circuito, información de los pilotos y equipos, y datos meteorológicos. Dado que aún no se ha disputado el Gran Premio de España, entrenaremos nuestro modelo de aprendizaje con datos históricos y luego lo compararemos con los datos reales una vez que la carrera tenga lugar.
+
+### Proceso
+
+- Comenzamos filtrando nuestros datos históricos para recopilar información sobre las apariciones del coche de seguridad en el Gran Premio de España, el cual es nuestro punto de enfoque.
+
+<details>
+<summary><b>VER DETALLES</b></summary>
+<br>
+
+![Safety](visualization/images/safety.png)
+
+</details>
+
+- Luego integramos esta información con los datos históricos ya filtrados del Gran Premio de España, lo que nos proporciona datos sobre pilotos, escuderías, puntuaciones, condiciones meteorológicas, y más, relacionados con esta carrera.
+
+<details>
+<summary><b>VER DETALLES</b></summary>
+<br>
+
+![Safety ES](visualization/images/safety_es.png)
+
+</details>
+
+- Con todos los datos estructurados y en orden, realizamos análisis previos antes de desarrollar el modelo de aprendizaje para garantizar la precisión y evitar sesgos.
+
+- Iniciamos con un análisis de las variables numéricas, investigando la correlación entre diferentes columnas en nuestro conjunto de datos y considerando si algunas de ellas pueden eliminarse.
+
+<details>
+<summary><b>VER DETALLES</b></summary>
+<br>
+
+![Correlación](visualization/images/correlacion.png)
+
+</details>
+
+- Luego, aplicamos la correlación de Spearman para determinar qué variables numéricas están significativamente relacionadas con la columna objetivo binaria.
+
+<details>
+<summary><b>VER DETALLES</b></summary>
+<br>
+
+![Variables Numéricas](visualization/images/numerico.png)
+
+</details>
+
+- En segundo lugar, realizamos un análisis de las variables categóricas mediante una prueba de Chi-cuadrado (Chi-Square Test) para determinar qué variables categóricas están significativamente relacionadas con la columna objetivo binaria.
+
+<details>
+<summary><b>VER DETALLES</b></summary>
+<br>
+
+![Variables Categóricas](visualization/images/categorico.png)
+
+</details>
+
+- Finalmente, realizamos un análisis de la variable binaria a través de una prueba de Chi-cuadrado para determinar si está significativamente relacionada con la columna objetivo binaria.
+
+<details>
+<summary><b>VER DETALLES</b></summary>
+<br>
+
+![Variable Binaria](visualization/images/binario.png)
+
+</details>
+
+- Luego de obtener conclusiones y tomar decisiones, llevamos a cabo un one-hot encoding para convertir las variables categóricas en variables numéricas.
+
+<details>
+<summary><b>VER DETALLES</b></summary>
+<br>
+
+![One-Hot Encoding](visualization/images/safety_ready.png)
+
+</details>
+
+- Para finalizar nuestro estudio, entrenamos nuestro modelo de aprendizaje con el conjunto de datos resultante, dividiendo el 80% de los datos para el entrenamiento y el 20% para la prueba.
+
+- Luego de evaluar nuestro conjunto de datos con varios algoritmos de regresión utilizando la biblioteca LazyPredict, seleccionamos los modelos que mostraron menos errores con nuestros datos.
+
+<details>
+<summary><b>VER DETALLES</b></summary>
+<br>
+
+![LazyPredict](visualization/images/ml_result.png)
+
+</details>
+
+- Finalmente, después de la carrera, comparamos los resultados de nuestro modelo de aprendizaje con los datos reales.
+
+<details>
+<summary><b>VER DETALLES</b></summary>
+<br>
+
+![Resultados](visualization/images)
+
+</details>
+
+<a name="conclusiones"/>
+
+## Conclusiones
+
