@@ -312,7 +312,7 @@ A continuación, observamos las siguientes imágenes de nuestra página web y de
 
 - En este apartado, podemos ver dos barras de búsqueda desplegables. En la primera, podemos seleccionar la temporada que deseemos, y en la segunda, podemos seleccionar el Gran Premio que deseemos disponible según la temporada que hayamos seleccionado previamente. Al seleccionar el año y el circuito deseados y pulsar el botón 'Submit', se mostrará en primer lugar un encabezado con la información del circuito, el piloto que hizo la pole y el piloto que ganó el Gran Premio.
 
-A partir de ahí, tendremos tres secciones: la sección 'Qualification results', que contendrá información de todas las sesiones de clasificación disputadas en ese Gran Premio; la sección 'Race results', que contendrá la información de la carrera disputada en ese Gran Premio; y, por último, la sección 'Race evolution', que contendrá un gráfico con el desempeño de la carrera disputada en ese Gran Premio.
+- A partir de ahí, tendremos tres secciones: la sección 'Qualification results', que contendrá información de todas las sesiones de clasificación disputadas en ese Gran Premio; la sección 'Race results', que contendrá la información de la carrera disputada en ese Gran Premio; y, por último, la sección 'Race evolution', que contendrá un gráfico con el desempeño de la carrera disputada en ese Gran Premio.
 
 <details>
 
