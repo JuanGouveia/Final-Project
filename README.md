@@ -315,8 +315,6 @@ A continuación, observamos las siguientes imágenes de nuestra página web y de
 - A partir de ahí, tendremos tres secciones: la sección 'Qualification results', que contendrá información de todas las sesiones de clasificación disputadas en ese Gran Premio; la sección 'Race results', que contendrá la información de la carrera disputada en ese Gran Premio; y, por último, la sección 'Race evolution', que contendrá un gráfico con el desempeño de la carrera disputada en ese Gran Premio.
 
 <details>
-
-<details>
 <summary><b>Races</b></summary>
 <br>
 
