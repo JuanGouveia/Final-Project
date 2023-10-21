@@ -221,3 +221,55 @@ Todas las consultas se realizan mediante SQLAlchemy y se limitan a mostrar los p
 
 ## Análisis Exploratorio de Datos (EDA)
 
+El objetivo de nuestro EDA es representar gráfica y visualmente los datos que hemos descubierto mediante un análisis y representar y explicar cada uno de ellos. Nos encargaremos de visualizar la distribución de variables clave en nuestro conjunto de datos, examinar cómo han evolucionado ciertas métricas a lo largo de las temporadas de la Fórmula 1, investigar los desempeños de pilotos y equipos a lo largo del tiempo, realizar comparaciones entre diferentes pilotos o equipos y comparar diferentes épocas en la Fórmula 1.
+
+### Dashboard de EDA
+
+A continuación, observamos el siguiente dashboard que hemos realizado y las conclusiones a las que hemos llegado:
+
+![Dashboard](visualization/images/dashboard.png)
+
+<details>
+<summary><b>Vueltas rapidas de carrera con el paso del tiempo</b></summary>
+<br>
+
+Tomamos como referencia el período de tiempo desde 1995 hasta 2022 y observamos que con el paso del tiempo en el circuito seleccionado (Circuit de Monaco), han ido disminuyendo los tiempos de vuelta rápida de carrera debido a los avances en los monoplazas de la Fórmula 1.
+
+</details>
+
+<details>
+<summary><b>Comparación de vueltas rapidas de carrera entre pilotos con el paso de los años</b></summary>
+<br>
+
+Tomamos como referencia el período de tiempo desde 2007 hasta 2022, ya que es el año en el que debutaron ambos pilotos seleccionados. Observamos que a lo largo de los años en el circuito seleccionado (Autodromo Nazionale di Monza), el piloto Sebastian Vettel ha sido más predominante en cuanto a las vueltas rápidas de carrera que el piloto Lewis Hamilton.
+
+</details>
+
+<details>
+<summary><b>Número de grandes premios con el paso del tiempo</b></summary>
+<br>
+
+En este caso, disponemos de datos históricos completos del número de Grandes Premios disputados desde 1950 hasta 2023. Observamos que con el paso de los años, el número de Grandes Premios disputados ha aumentado constantemente en la gran mayoría de temporadas de la Fórmula 1.
+
+</details>
+
+<details>
+<summary><b>Desempeño de los pilotos en todas sus carreras disputadas</b></summary>
+<br>
+
+En este caso, contamos con el desempeño histórico de todas las carreras disputadas por los pilotos de la Fórmula 1. Podemos observar estadísticas como las veces que han finalizado una carrera, las veces que han tenido colisiones o las veces que han sido descalificados de una carrera.
+
+</details>
+
+<details>
+<summary><b>Apariciones de safety cars por países</b></summary>
+<br>
+
+Tomamos como referencia el período de tiempo desde 1973 hasta 2022, ya que a pesar de que la primera aparición de un safety car fue en 1973, no se incluyó en el reglamento de la Fórmula 1 hasta 1993. Observamos los diferentes países en los que ha aparecido el safety car en más ocasiones, lo que muestra la tendencia de su aparición en un país o circuito determinado.
+
+</details>
+
+<a name="página"/>
+
+## Desarrollo de la Página Web
+
