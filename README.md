@@ -242,7 +242,7 @@ Tomamos como referencia el período de tiempo desde 1995 hasta 2022 y observamos
 <summary><b>Comparación de vueltas rapidas de carrera entre pilotos con el paso de los años</b></summary>
 <br>
 
-Tomamos como referencia el período de tiempo desde 2007 hasta 2022, ya que es el año en el que debutaron ambos pilotos seleccionados. Observamos que a lo largo de los años en el circuito seleccionado (Autodromo Nazionale di Monza), el piloto Sebastian Vettel ha sido más predominante en cuanto a las vueltas rápidas de carrera que el piloto Lewis Hamilton.
+Tomamos como referencia el período de tiempo desde 2007 hasta 2022, ya que es el año en el que debutaron ambos pilotos seleccionados. Observamos que a lo largo de los años en el circuito seleccionado (Autodromo Nazionale di Monza), el piloto Lewis Hamilton ha sido más predominante en cuanto a las vueltas rápidas de carrera que el piloto Sebastian Vettel.
 
 </details>
 
