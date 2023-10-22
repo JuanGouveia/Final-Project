@@ -424,7 +424,7 @@ Para concluir nuestro proyecto, decidimos realizar un estudio sobre la probabili
 <summary><b>VER DETALLES</b></summary>
 <br>
 
-![Resultados](visualization/images)
+![Resultados](visualization/images/resultados.png)
 
 </details>
 
@@ -436,7 +436,7 @@ El resultado final de este proyecto se puede dividir en varias fases:
 
 En primer lugar, podemos concluir que el objetivo principal se ha logrado con éxito. Hemos creado una base de datos bien estructurada que contiene datos altamente interesantes sobre el mundo de la Fórmula 1. Además, hemos extraído conclusiones valiosas a través del análisis exploratorio de datos, respaldadas por visualizaciones atractivas e interactivas que facilitan la comprensión de nuestras conclusiones.
 
-En cuanto al objetivo secundario, hemos tenido un cumplimiento satisfactorio, pero existe margen de mejora. En lo que respecta a la página web, se podría mejorar tanto la estética como la claridad de los gráficos que representan el desempeño de las carreras, proporcionando detalles más precisos y comprensibles en los gráficos. En el caso del modelo de aprendizaje, aunque dos de las tres predicciones son correctas, el margen de error es elevado. Esto sugiere que en el futuro, deberíamos considerar aportar más y mejores datos para lograr predicciones más precisas.
+En cuanto al objetivo secundario, hemos tenido un cumplimiento satisfactorio, pero existe margen de mejora. En lo que respecta a la página web, se podría mejorar tanto la estética como la claridad de los gráficos que representan el desempeño de las carreras, proporcionando detalles más precisos y comprensibles en los gráficos. En el caso del modelo de aprendizaje, aunque las tres predicciones son correctas, el margen de error es elevado. Esto sugiere que en el futuro, deberíamos considerar aportar más y mejores datos para lograr predicciones más precisas.
 
 En resumen, se trata de un proyecto exitoso con objetivos cumplidos y oportunidades de mejora para futuras iteraciones.
 
