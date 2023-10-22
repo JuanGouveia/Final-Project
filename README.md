@@ -432,3 +432,12 @@ Para concluir nuestro proyecto, decidimos realizar un estudio sobre la probabili
 
 ## Conclusiones
 
+
+
+<a name="enlaces"/>
+
+#### Enlaces
+
+- [Tableau](https://public.tableau.com/app/profile/juan.andres.gouveia.fardilha/viz/Formula1Record-History/History)
+- [F1 Record](http://localhost:8501/) (Inactiva)
+- [Presentación](https://www.canva.com/design/DAFlR1kNNB0/IlPOKpC3c1RD31mQ3MTuRg/watch?utm_content=DAFlR1kNNB0&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
